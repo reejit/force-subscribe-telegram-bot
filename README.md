@@ -7,6 +7,8 @@
 - [X] Configure different groups with different channels
 - [X] Clean messages after completion
 - [ ] LOGGER support.
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/reejiy/https://github.com/reejit/force-subscribe-telegram-bot.git)
+
 
 ## Deploy
 
