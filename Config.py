@@ -27,4 +27,4 @@ class Messages():
         ""
       ]
 
-      START_MSG = "**Hey [{}](tg://user?id={})**\n__This is useless here \n Join @askplugins to see how i work__"
+      START_MSG = "**Hey [{}](tg://user?id={})**\n__This is useless here \nJoin @askplugins to see how i work__"
