@@ -99,8 +99,8 @@ def config(client, message):
           message.reply_text(f"❗ **ERROR:** ```{err}```")
     else:
       if sql.fs_settings(chat_id):
-        message.reply_text(f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__", disable_web_page_preview=True)
+        message.reply_text(f"✅ **I am enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__", disable_web_page_preview=True)
       else:
-        message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
+        message.reply_text("❌ **I am is disabled in this chat.**")
   else:
       message.reply_text("❗ **Group Creator Required**\n__You have to be the group creator to do that.__")
