@@ -53,8 +53,12 @@ def _check_member(client, message):
               "{}, you have **not subscribed** to my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
+                  [[InlineKeyboardButton(
+                        text="Join Our Channel",
+                        url="https://t.me/{}".format(channel))
+                ],
+                 [InlineKeyboardButton ("Let Me Speak",callback_data="onUnMuteRequest)]]
                   [[InlineKeyboardButton("Let Me Speak", callback_data="onUnMuteRequest")]]
-              )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
@@ -104,3 +108,17 @@ def config(client, message):
         message.reply_text("❌ **I am is disabled in this chat.**")
   else:
       message.reply_text("❗ **Group Creator Required**\n__You have to be the group creator to do that.__")
+
+
+
+[[
+                        InlineKeyboardButton(
+                            text="☑️ Add Saitama to your group",
+                            url="t.me/{}?startgroup=true".format(
+                                context.bot.username))
+                    ],
+                     [
+                         InlineKeyboardButton(
+                             text="🚑 Support Group",
+                             url=f"https://t.me/{SUPPORT_CHAT}")
+                      ]
