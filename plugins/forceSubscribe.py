@@ -57,8 +57,7 @@ def _check_member(client, message):
                         text="Join Our Channel",
                         url="https://t.me/{}".format(channel))
                 ],
-                 [InlineKeyboardButton ("Let Me Speak",callback_data="onUnMuteRequest)]]
-                  [[InlineKeyboardButton("Let Me Speak", callback_data="onUnMuteRequest")]]
+                 [InlineKeyboardButton ("Let Me Speak",callback_data="onUnMuteRequest")]]
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
