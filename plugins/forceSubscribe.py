@@ -57,7 +57,8 @@ def _check_member(client, message):
                          InlineKeyboardButton(
                              text="Channel",
                              url=f"https://t.me/checkedplugins"),
-                         InlineKeyboardButton(("UnMute Me", callback_data="onUnMuteRequest")
+                         InlineKeyboardButton(
+                        text="Back", callback_data="onUnMuteRequest")
                      ]
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
