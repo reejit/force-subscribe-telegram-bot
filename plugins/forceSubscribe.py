@@ -61,8 +61,7 @@ def _check_member(client, message):
                   [InlineKeyboardButton (
                         text="Channel",
                         url="t.me/checkedplugins")]
-              )
-          )
+
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
           sent_message.edit("❗ **I am not an admin here.**\n__Make me admin with ban user permission and add me again.\n#Leaving this chat...__")
@@ -114,14 +113,3 @@ def config(client, message):
 
 
 
-[[
-                        InlineKeyboardButton(
-                            text="☑️ Add Saitama to your group",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username))
-                    ],
-                     [
-                         InlineKeyboardButton(
-                             text="🚑 Support Group",
-                             url=f"https://t.me/{SUPPORT_CHAT}")
-                      ]
